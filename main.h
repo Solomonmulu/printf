@@ -59,7 +59,6 @@ int printfString(va_list val);
 int _putchar(char c);
 int _printf(const char *format, ...);
 int printfExclusiveString(va_list args);
-static int process_format_specifiers(const char *format, va_list args);
 
 
 #endif
