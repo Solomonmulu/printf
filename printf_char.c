@@ -1,73 +1,73 @@
 #include "main.h"
 
 /**
- * printf_char - prints a char.
- * @val: arguments.
+ * printfChar - Character print.
+ * @args: arguments.
  * Return: 1.
  */
-int printfChar(va_list val)
+int printfChar(va_list args)
 {
-	char s;
+	char c;
 
-	s = va_arg(val, int);
-	_putchar(s);
+	c = va_arg(args, int);
+	_putchar(c);
 	return (1);
 }
 
 /**
  * printfString - print a string.
- * @val: argumen t.
+ * @args: arguments.
  * Return: the length of the string.
  */
 
-int printfString(va_list val)
+int printfString(va_list args)
 {
-	char *s;
-	int i, len;
+	char *str;
+	int i, ln;
 
-	s = va_arg(val, char *);
-	if (s == NULL)
+	str = va_arg(args, char *);
+	if (str == NULL)
 	{
-		s = "(null)";
-		len = _strlen(s);
-		for (i = 0; i < len; i++)
-			_putchar(s[i]);
-		return (len);
+		str = "(null)";
+		ln = _strlen(str);
+		for (i = 0; i < ln; i++)
+			_putchar(str[i]);
+		return (ln);
 	}
 	else
 	{
-		len = _strlen(s);
-		for (i = 0; i < len; i++)
-			_putchar(s[i]);
-		return (len);
+		ln = _strlen(str);
+		for (i = 0; i < ln; i++)
+			_putchar(str[i]);
+		return (ln);
 	}
 }
 
 /**
  * _strlen - Returns the lenght of a string.
- * @s: Type char pointer
- * Return: c.
+ * @str: Type char pointer
+ * Return: s
  */
-int _strlen(char *s)
+int _strlen(char *str)
 {
-	int c;
+	int s;
 
-	for (c = 0; s[c] != 0; c++)
+	for (s = 0; str[s] != 0; s++)
 		;
-	return (c);
+	return (s);
 
 }
 
 /**
- * _strlenc - Strlen function but applied for constant char pointer s
- * @s: Type char pointer
- * Return: c
+ * _strlenc - Strlen function but applied for constant char pointer str
+ * @str: Type char pointer
+ * Return: s
  */
-int _strlenc(const char *s)
+int _strlenc(const char *str)
 {
-	int c;
+	int s;
 
-	for (c = 0; s[c] != 0; c++)
+	for (s = 0; str[s] != 0; s++)
 		;
-	return (c);
+	return (s);
 }
