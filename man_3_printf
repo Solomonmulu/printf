@@ -4,7 +4,7 @@
 .\"
 .\"
 .\"
-.TH _PRINTF "Nov 14 2023" "0.1" "Library functions manual"
+.TH _PRINTF "August 05 2022" "0.1" "Library functions manual"
 
 .SH NAME
 .SH ""
@@ -127,6 +127,8 @@ hexadecimal preceded by \x
 .SH "AUTHORS"
 .SH ""
 
-Solomon Kassa and Antipas Behilu
+Nicks Gitobu and Musa Parsanka
 
-
+.B Twitter
+.PP
+@_pronicks @musa_parsanka
