@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * printfInt - prints integer
+ * printf_int - prints integer
  * @args: argument to print
  * Return: number of characters printed
  */
-int printfInt(va_list args)
+int printf_int(va_list args)
 {
 	int n = va_arg(args, int);
 	int num, last = n % 10, digit, exp = 1;
-	int i = 1;
+	int  i = 1;
 
 	n = n / 10;
 	num = n;
@@ -24,15 +24,18 @@ int printfInt(va_list args)
 	}
 	if (num > 0)
 	{
-		for (; num / 10 != 0; exp *= 10, num /= 10)
-			;
-
+		while (num / 10 != 0)
+		{
+			exp = exp * 10;
+			num = num / 10;
+		}
 		num = n;
-		for (; exp > 0; exp /= 10)
+		while (exp > 0)
 		{
 			digit = num / exp;
 			_putchar(digit + '0');
 			num = num - (digit * exp);
+			exp = exp / 10;
 			i++;
 		}
 	}
@@ -41,16 +44,17 @@ int printfInt(va_list args)
 	return (i);
 }
 
+
 /**
- * printfDec - prints decimal
+ * printf_dec - prints decimal
  * @args: argument to print
  * Return: number of characters printed
  */
-int printfDec(va_list args)
+int printf_dec(va_list args)
 {
 	int n = va_arg(args, int);
 	int num, last = n % 10, digit;
-	int i = 1;
+	int  i = 1;
 	int exp = 1;
 
 	n = n / 10;
@@ -66,15 +70,18 @@ int printfDec(va_list args)
 	}
 	if (num > 0)
 	{
-		for (; num / 10 != 0; exp *= 10, num /= 10)
-			;
-
+		while (num / 10 != 0)
+		{
+			exp = exp * 10;
+			num = num / 10;
+		}
 		num = n;
-		for (; exp > 0; exp /= 10)
+		while (exp > 0)
 		{
 			digit = num / exp;
 			_putchar(digit + '0');
 			num = num - (digit * exp);
+			exp = exp / 10;
 			i++;
 		}
 	}
@@ -84,15 +91,15 @@ int printfDec(va_list args)
 }
 
 /**
- * printfUnsigned - prints integer
+ * printf_unsigned - prints integer
  * @args: argument to print
  * Return: number of characters printed
  */
-int printfUnsigned(va_list args)
+int printf_unsigned(va_list args)
 {
 	unsigned int n = va_arg(args, unsigned int);
 	int num, last = n % 10, digit, exp = 1;
-	int i = 1;
+	int  i = 1;
 
 	n = n / 10;
 	num = n;
@@ -107,15 +114,18 @@ int printfUnsigned(va_list args)
 	}
 	if (num > 0)
 	{
-		for (; num / 10 != 0; exp *= 10, num /= 10)
-			;
-
+		while (num / 10 != 0)
+		{
+			exp = exp * 10;
+			num = num / 10;
+		}
 		num = n;
-		for (; exp > 0; exp /= 10)
+		while (exp > 0)
 		{
 			digit = num / exp;
 			_putchar(digit + '0');
 			num = num - (digit * exp);
+			exp = exp / 10;
 			i++;
 		}
 	}

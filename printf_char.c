@@ -1,79 +1,83 @@
 #include "main.h"
 
 /**
- * printfChar - prints a char.
+ * printf_char - prints a char.
  * @val: arguments.
  * Return: 1.
  */
-int printfChar(va_list val)
+int printf_char(va_list val)
 {
-	char character = va_arg(val, int);
-	_putchar(character);
+	char s;
+
+	s = va_arg(val, int);
+	_putchar(s);
 	return (1);
 }
 
 /**
- * printfString - print a string.
- * @val: argument.
+ * printf_string - print a string.
+ * @val: argumen t.
  * Return: the length of the string.
  */
-int printfString(va_list val)
+
+int printf_string(va_list val)
 {
-	char *str = va_arg(val, char *);
+	char *s;
 	int i, len;
 
-	if (str == NULL)
+	s = va_arg(val, char *);
+	if (s == NULL)
 	{
-		str = "(null)";
-		len = _strlen(str);
+		s = "(null)";
+		len = _strlen(s);
 		for (i = 0; i < len; i++)
-			_putchar(str[i]);
+			_putchar(s[i]);
 		return (len);
 	}
 	else
 	{
-		len = _strlen(str);
+		len = _strlen(s);
 		for (i = 0; i < len; i++)
-			_putchar(str[i]);
+			_putchar(s[i]);
 		return (len);
 	}
 }
 
 /**
- * printfExclusiveString - print exclusive string.
- * @val: argument.
+ * printf_exclusive_string - print exclusuives string.
+ * @val: argumen t.
  * Return: the length of the string.
  */
-int printfExclusiveString(va_list val)
+
+int printf_exclusive_string(va_list val)
 {
-	char *str = va_arg(val, char *);
+	char *s;
 	int i, len = 0;
 	int cast;
 
-	if (str == NULL)
-		str = "(null)";
-
-	for (i = 0; str[i] != '\0'; i++)
+	s = va_arg(val, char *);
+	if (s == NULL)
+		s = "(null)";
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (str[i] < 32 || str[i] >= 127)
+		if (s[i] < 32 || s[i] >= 127)
 		{
 			_putchar('\\');
 			_putchar('x');
-			len += 2;
-			cast = str[i];
+			len = len + 2;
+			cast = s[i];
 			if (cast < 16)
 			{
 				_putchar('0');
 				len++;
 			}
-			len += printf_HEX_aux(cast);
+			len = len + printf_HEX_aux(cast);
 		}
 		else
 		{
-			_putchar(str[i]);
+			_putchar(s[i]);
 			len++;
 		}
 	}
 	return (len);
 }
-
