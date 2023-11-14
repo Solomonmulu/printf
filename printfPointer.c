@@ -2,10 +2,10 @@
 
 /**
  * printfPointer - prints an hexgecimal number.
- * @val: arguments.
+ * @args: arguments.
  * Return: counter.
  */
-int printfPointer(va_list val)
+int printfPointer(va_list args)
 {
 	void *p;
 	char *s = "(nil)";
@@ -13,7 +13,7 @@ int printfPointer(va_list val)
 	int b;
 	int i;
 
-	p = va_arg(val, void*);
+	p = va_arg(args, void*);
 	if (p == NULL)
 	{
 		for (i = 0; s[i] != '\0'; i++)

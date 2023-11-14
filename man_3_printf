@@ -24,7 +24,7 @@ int _printf(const char *[FORMAT], ...);
 
 
 The printf function sends formatted output to stdout.
-A custom _printf() for learning purposes was developed by cohort  #8 students Nicks and Mose Parsanka.
+A custom _printf() for learning purposes was developed by cohort  #8 students Solomon Kassa and Antipas Belihu.
 _printf() function format string is a character string, beginning and ending in its initial shift state, if any. 
 These arguments are placed using the percentage '%' operator
 
@@ -35,7 +35,7 @@ These arguments are placed using the percentage '%' operator
 #include "main.h"
 
 $ gcc -Wall -Werror -Wextra -pedantic -Wno-format *.c
-$ gcc -Wall -Werror -Wextra -pedantic -g -Wno-format *.c (for gdb debbuging)
+$ gcc -Wall -Werror -Wextra -pedantic -g -Wno-format *.c (for gdb debugging)
 .RE
 
 .SS Printing
@@ -101,7 +101,7 @@ Current arguments handled by conversion specifiers:
 
 .B o, u, x, X
 - unsigned int argument converted to unsigned octal (o), unsigned decimal (u),
-unsigned hexidecimal notation (x) for lower case and (X) for upper case
+unsigned hexadecimal notation (x) for lower case and (X) for upper case
 
 .IT
 .B b
@@ -109,7 +109,7 @@ unsigned hexidecimal notation (x) for lower case and (X) for upper case
 
 .IT
 .B p
-- The pointer is printed in hexidecimal format preceded by '0x'.
+- The pointer is printed in hexadecimal format preceded by '0x'.
 
 .IT
 .B r, R
@@ -117,7 +117,7 @@ unsigned hexidecimal notation (x) for lower case and (X) for upper case
 
 .IT
 .B S
-- ascii <32 & >127 has to appear in the argument string. converted to
+- ASCII <32 & >127 has to appear in the argument string. converted to
 hexadecimal preceded by \x
 
 .RE
@@ -127,8 +127,8 @@ hexadecimal preceded by \x
 .SH "AUTHORS"
 .SH ""
 
-Nicks Gitobu and Musa Parsanka
+Solomon Kassa and Antipas Belihu
 
 .B Twitter
 .PP
-@_pronicks @musa_parsanka
+@solomon_kassa @antipas_belihu
