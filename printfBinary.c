@@ -7,9 +7,7 @@
  */
 int printfBin(va_list args)
 {
-	int flag = 0;
-	int cont = 0;
-	int i, a = 1, b;
+	int fl = 0, c = 0, i, a = 1, b;
 	unsigned int num = va_arg(args, unsigned int);
 	unsigned int p;
 
@@ -17,20 +15,20 @@ int printfBin(va_list args)
 	{
 		p = ((a << (31 - i)) & num);
 		if (p >> (31 - i))
-			flag = 1;
-		if (flag)
+			fl = 1;
+		if (fl)
 		{
 			b = p >> (31 - i);
 			_putchar(b + 48);
-			cont++;
+			c++;
 		}
 	}
-	if (cont == 0)
+	if (c == 0)
 	{
-		cont++;
+		c++;
 		_putchar('0');
 	}
-	return (cont);
+	return (c);
 }
 
 /**
