@@ -11,7 +11,7 @@
 
 /**
  * struct specifiers - match the conversion specifiers for printf
- * @identity: type char pointer of the specifier i.e (l, h) for (d, i, u, o, x, X)
+ * @identity: type char pointer of the specifier i.e
  * @flag: type pointer to function for the conversion specifier
  *
  */
