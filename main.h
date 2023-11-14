@@ -16,10 +16,10 @@
  *
  */
 
-typedef struct  specifiers
+typedef struct  format
 {
-	char *identity;
-	int (*flag)();
+	char *id;
+	int (*f)();
 } convert_match;
 
 int printfPointer(va_list args);
