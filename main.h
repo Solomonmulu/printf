@@ -10,13 +10,13 @@
 
 
 /**
- * struct format - match the conversion specifiers for printf
+ * struct specifiers - match the conversion specifiers for printf
  * @identity: type char pointer of the specifier i.e (l, h) for (d, i, u, o, x, X)
  * @flag: type pointer to function for the conversion specifier
  *
  */
 
-typedef struct format
+typedef struct  specifiers
 {
 	char *identity;
 	int (*flag)();
