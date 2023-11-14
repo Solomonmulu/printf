@@ -8,7 +8,7 @@ int _printf(const char * const format, ...)
 {
 	int i = 0, j, len = 0;
 	va_list args;
-	convert_match m[] = {
+	convert_match meta[] = {
 		{"%s", printfString}, {"%c", printfChar},
 		{"%%", printfpercent},
 		{"%i", printfInt}, {"%d", printfDec}, {"%r", printfRev},
@@ -28,9 +28,9 @@ Here:
 		j = 13;
 		while (j >= 0)
 		{
-			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
+			if (meta[j].id[0] == format[i] && meta[j].id[1] == format[i + 1])
 			{
-				len += m[j].f(args);
+				len += meta[j].f(args);
 				i = i + 2;
 				goto Here;
 			}
