@@ -38,9 +38,7 @@ int printfBin(va_list args)
  */
 int printfOct(va_list args)
 {
-	int i;
-	int *array;
-	int count = 0;
+	int i, *array, count = 0;
 	unsigned int num = va_arg(args, unsigned int);
 	unsigned int temp = num;
 
