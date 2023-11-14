@@ -1,44 +1,44 @@
 #include "main.h"
 
 /**
- * printf_bin - prints a binary number.
+ * printfBin - prints a binary number.
  * @val: arguments.
- * Return: 1.
+ * Return: number of characters printed.
  */
-int printf_bin(va_list val)
+int printfBin(va_list val)
 {
 	int flag = 0;
-	int cont = 0;
-	int i, a = 1, b;
+	int count = 0;
+	int i, bit;
 	unsigned int num = va_arg(val, unsigned int);
-	unsigned int p;
+	unsigned int mask;
 
 	for (i = 0; i < 32; i++)
 	{
-		p = ((a << (31 - i)) & num);
-		if (p >> (31 - i))
+		mask = ((1u << (31 - i)) & num);
+		if (mask >> (31 - i))
 			flag = 1;
 		if (flag)
 		{
-			b = p >> (31 - i);
-			_putchar(b + 48);
-			cont++;
+			bit = mask >> (31 - i);
+			_putchar(bit + '0');
+			count++;
 		}
 	}
-	if (cont == 0)
+	if (count == 0)
 	{
-		cont++;
+		count++;
 		_putchar('0');
 	}
-	return (cont);
+	return (count);
 }
 
 /**
- * printf_oct - prints an octal number.
+ * printfOct - prints an octal number.
  * @val: arguments.
- * Return: counter.
+ * Return: number of characters printed.
  */
-int printf_oct(va_list val)
+int printfOct(va_list val)
 {
 	int i;
 	int *array;
@@ -66,3 +66,4 @@ int printf_oct(va_list val)
 	free(array);
 	return (counter);
 }
+
