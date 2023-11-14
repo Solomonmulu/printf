@@ -1,5 +1,10 @@
 # Printf Project
 
+[![GitHub](https://img.shields.io/badge/GitHub-solomonmulu/printf-<COLOR>?style=flat-square)](https://github.com/solomonmulu/printf)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Language](https://img.shields.io/badge/Language-c-brightgreen)]()
+[![Last Commit](https://img.shields.io/github/last-commit/solomonmulu/printf)]()
+
 This project, a custom version of the `printf` function, was developed by Solomon Kassa and Antipas Belihu. It aims to provide a learning experience while offering a unique approach to the standard printf functionality.
 
 ## Table of Contents
@@ -66,7 +71,7 @@ Visit our Issue Tracker to report bugs, suggest enhancements, or discuss ideas.
 5. Open a Pull Request.
 
 ## Authors
-[Solomon Kassa](https://github.com/Solomonmulu/)
-[Antipas Belihu](https://github.com/AntipasG/)
-License
+- [Solomon Kassa](https://github.com/Solomonmulu/)
+- [Antipas Belihu](https://github.com/AntipasG/)
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
