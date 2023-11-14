@@ -6,6 +6,8 @@
  */
 int _printf(const char * const format, ...)
 {
+	int i = 0, j, len = 0;
+	va_list args;
 	convert_match m[] = {
 		{"%s", printfString}, {"%c", printfChar},
 		{"%%", printf37},
@@ -15,10 +17,8 @@ int _printf(const char * const format, ...)
 		{"%S", printfExclusiveString}, {"%p", printfPointer}
 	};
 
-	va_list args;
-	int i = 0, j, len = 0;
-
 	va_start(args, format);
+
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 

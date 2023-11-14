@@ -44,5 +44,7 @@ int printfString(va_list val);
 int _putchar(char c);
 int _printf(const char *format, ...);
 int printfExclusiveString(va_list args);
+void process_format_specifier(const char *format,
+						convert_match *m, va_list args, int *len);
 
 #endif
