@@ -59,7 +59,7 @@ int printfOct(va_list args)
 		array[i] = temp % 8;
 		temp /= 8;
 	}
-	for (i = counter - 1; i >= 0; i--)
+	for (i = count - 1; i >= 0; i--)
 	{
 		_putchar(array[i] + '0');
 	}
