@@ -16,7 +16,7 @@
  *
  */
 
-typedef struct  format
+typedef struct format
 {
 	char *id;
 	int (*f)();
