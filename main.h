@@ -38,7 +38,7 @@ int _strlen(char *s);
 int *_strcpy(char *dest, char *src);
 int _strlenc(const char *str);
 int revString(char *s);
-int printf37(void);
+int printfpercent(void);
 int printfChar(va_list val);
 int printfString(va_list val);
 int _putchar(char c);
