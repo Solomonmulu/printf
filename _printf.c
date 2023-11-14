@@ -1,13 +1,12 @@
 #include "main.h"
-
 /**
- * _printf - selects the correct function to print.
+ * _printf - is a function that selects the correct function to print.
  * @format: identifier to look for.
  * Return: the length of the string.
  */
 int _printf(const char * const format, ...)
 {
-	int i, j, len = 0;
+	int i = 0, j, len = 0;
 	va_list args;
 	convert_match m[] = {
 		{"%s", printfString}, {"%c", printfChar},
@@ -23,23 +22,24 @@ int _printf(const char * const format, ...)
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 
-	for (i = 0; format[i] != '\0'; i++)
+Here:
+	while (format[i] != '\0')
 	{
-		for (j = 13; j >= 0; j--)
+		j = 13;
+		while (j >= 0)
 		{
 			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
 			{
 				len += m[j].f(args);
-				i += 2;
-				goto here;
+				i = i + 2;
+				goto Here;
 			}
+			j--;
 		}
 		_putchar(format[i]);
 		len++;
-	here:
-		continue;
+		i++;
 	}
-
 	va_end(args);
 	return (len);
 }
