@@ -66,7 +66,7 @@ Visit our Issue Tracker to report bugs, suggest enhancements, or discuss ideas.
 5. Open a Pull Request.
 
 ## Authors
-[Solomon Kassa](https://github.com/Solomonmulu/)
-[Antipas Belihu](https://github.com/AntipasG/)
-License
+- [Solomon Kassa](https://github.com/Solomonmulu/)
+- [Antipas Belihu](https://github.com/AntipasG/)
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
