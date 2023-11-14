@@ -20,18 +20,20 @@ static int process_format_specifiers(const char *format, va_list args)
 
     while (format[i] != '\0')
     {
-        j = 13;
-        while (j >= 0)
+        int specifier_found = 0;
+
+        for (j = 13; j >= 0; j--)
         {
             if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
             {
                 len += m[j].f(args);
                 i = i + 2;
+                specifier_found = 1;
                 break;
             }
-            j--;
         }
-        if (j < 0) // No match found for format specifier
+
+        if (!specifier_found)
         {
             _putchar(format[i]);
             len++;
