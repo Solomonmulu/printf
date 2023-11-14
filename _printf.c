@@ -10,7 +10,7 @@ int _printf(const char * const format, ...)
 	va_list args;
 	convert_match m[] = {
 		{"%s", printfString}, {"%c", printfChar},
-		{"%%", printf37},
+		{"%%", printfpercent},
 		{"%i", printfInt}, {"%d", printfDec}, {"%r", printfRev},
 		{"%R", printfRot13}, {"%b", printfBin}, {"%u", printfUnsigned},
 		{"%o", printfOct}, {"%x", printfHex}, {"%X", printfHEX},
